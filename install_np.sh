@@ -69,3 +69,11 @@ cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm56
 chmod +x /etc/init.d/php-fpm56
 chkconfig --add php-fpm56
 chkconfig php-fpm56 on
+
+echo "#######"
+echo "install finish"
+echo "nginx dir:/home/public/nginx"
+echo "php dir:/home/public/php-5.6"
+echo "service nginx start"
+echo "service php-fpm56 start"
+echo "#######"
