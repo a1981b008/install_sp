@@ -11,8 +11,16 @@ cd nginx-1.13.4
 make
 make install
 
-###php-fpm
 cd ../
+
+basedir=/home/public/nginx
+sed -i 's#^basedir=.*$#basedir='$(echo $basedir)'#g' nginx
+cp nginx /etc/init.d/
+chkconfig --add nginx
+chkconfig nginx on
+
+
+###php-fpm
 yum install -y gcc gcc-c++ libxml2 libxml2-devel openssl-devel.x86_64  curl-devel libjpeg libjpeg-devel libpng libpng-devel  freetype freetype-devel mysql-devel.x86_64
 wget http://cn2.php.net/distributions/php-5.6.25.tar.bz2
 bunzip2 php-5.6.25.tar.bz2
