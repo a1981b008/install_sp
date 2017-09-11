@@ -58,7 +58,8 @@ cd php-5.6.25
 --with-openssl \
 --enable-pcntl \
 --with-xmlrpc \
---enable-opcache
+--enable-opcache\
+--with-http_ssl_module
 
 make
 make install
