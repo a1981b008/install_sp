@@ -1,5 +1,13 @@
 #!/bin/bash
 
+##author:pengzezhou
+
+###install basic tool
+yum install -y lrzsz.x86_64  openssh-clients vim strace mlocate.x86_64 wget.x86_64 telnet mailx mlocate ntpdate traceroute zip unzip lsof.x86_64
+
+setenforce 0
+sed -i '/^SELINUX=/c\SELINUX=disabled' /etc/selinux/config
+
 #####nginx
 echo "***************start install nginx************"
 
