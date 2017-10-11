@@ -83,6 +83,14 @@ sed '/^user=/c\user=mosh' /home/public/php-5.6/etc/php-fpm.conf
 sed '/^user=/c\group=mosh' /home/public/php-5.6/etc/php-fpm.conf
 sed '/^;error_log/c\error_log=log/php-fpm.log' /home/public/php-5.6/etc/php-fpm.conf
 
+cd ../
+
+mv /home/public/nginx/conf/nginx.conf /home/public/nginx/conf/nginx.conf_bak
+mv /home/public/nginx/conf/fastcgi.conf /home/public/nginx/conf/fastcgi.conf_bak 
+cp nginx_conf/fastcgi.conf /home/public/nginx/conf/
+cp nginx_conf/nginx.conf /home/public/nginx/conf/
+cp nginx_conf/vhost.conf /home/public/nginx/conf/
+
 echo "#######"
 echo "install finish"
 echo "nginx dir:/home/public/nginx"
