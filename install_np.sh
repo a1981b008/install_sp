@@ -79,10 +79,15 @@ chmod +x /etc/init.d/php-fpm56
 chkconfig --add php-fpm56
 chkconfig php-fpm56 on
 
+sed '/^user=/c\user=mosh' /home/public/php-5.6/etc/php-fpm.conf 
+sed '/^user=/c\group=mosh' /home/public/php-5.6/etc/php-fpm.conf
+sed '/^;error_log/c\error_log=log/php-fpm.log' /home/public/php-5.6/etc/php-fpm.conf
+
 echo "#######"
 echo "install finish"
 echo "nginx dir:/home/public/nginx"
 echo "php dir:/home/public/php-5.6"
 echo "service nginx start"
 echo "service php-fpm56 start"
+echo "start php-fpm user=mosh"
 echo "#######"
