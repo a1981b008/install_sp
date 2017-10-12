@@ -79,9 +79,9 @@ chmod +x /etc/init.d/php-fpm56
 chkconfig --add php-fpm56
 chkconfig php-fpm56 on
 
-sed '/^user=/c\user=mosh' /home/public/php-5.6/etc/php-fpm.conf 
-sed '/^user=/c\group=mosh' /home/public/php-5.6/etc/php-fpm.conf
-sed '/^;error_log/c\error_log=log/php-fpm.log' /home/public/php-5.6/etc/php-fpm.conf
+sed -i '/^user=/c\user=mosh' /home/public/php-5.6/etc/php-fpm.conf 
+sed -i '/^user=/c\group=mosh' /home/public/php-5.6/etc/php-fpm.conf
+sed -i '/^;error_log/c\error_log=log/php-fpm.log' /home/public/php-5.6/etc/php-fpm.conf
 
 cd ../
 
