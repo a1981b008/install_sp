@@ -1,4 +1,5 @@
 #!/bin/bash
+#首先下载mysql到同目录 https://pan.baidu.com/s/1_1rBtf1OO80Pgy9AgbVjRA
 clear
 
 if [ $# != 1 ] ; then 
