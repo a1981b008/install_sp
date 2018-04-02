@@ -9,7 +9,7 @@ exit 1;
 fi 
 
 yum install -y make cmake automake autoconf bison bison-devel gcc gcc-c++ ncurses ncurses-devel
-MYSQL_VERSION=mysql-5.5.43
+MYSQL_VERSION=mysql-5.6.34
 PORT="$1"
 INSTALL_PATH=/home/pubsrv/mysql_"$PORT"
 
