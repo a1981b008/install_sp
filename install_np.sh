@@ -3,7 +3,7 @@
 ##author:pengzezhou
 
 ###install basic tool
-yum install -y lrzsz.x86_64  openssh-clients vim strace mlocate.x86_64 wget.x86_64 telnet mailx mlocate ntpdate traceroute zip unzip lsof.x86_64 bzip2
+yum install -y lrzsz.x86_64  openssh-clients vim strace mlocate.x86_64 wget.x86_64 telnet mailx mlocate ntpdate traceroute zip unzip lsof.x86_64 bzip2 m2crypto
 
 setenforce 0
 sed -i '/^SELINUX=/c\SELINUX=disabled' /etc/selinux/config
